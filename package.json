@@ -1,0 +1,16 @@
+{
+  "name": "revora",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Revora — Autonomous Revenue Recovery",
+  "scripts": {
+    "dev": "concurrently -k -n SERVER,CLIENT -c yellow,cyan \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "install:all": "npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
